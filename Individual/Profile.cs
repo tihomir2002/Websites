@@ -16,12 +16,12 @@
 
         public void AddFriend()
         {
-            FriendList.friends.Add(this);
+            FriendList.Friends.Add(this);
         }
 
         public void RemoveFriend()
         {
-            FriendList.friends.Remove(this);
+            FriendList.Friends.Remove(this);
         }
 
         public void ChangeNickname(string name)

@@ -1,16 +1,54 @@
-﻿namespace Individual
+﻿using MySql.Data.MySqlClient;
+
+namespace Individual
 {
     public class Settings
     {
         private Panel default_panel;
         private Form1 parent;
+        private MyProfile profile;
 
         public Panel DefaultPanel { get => default_panel; }
 
-        public Settings(Form1 form)
+        public Settings(Form1 form, MyProfile myProfile)
         {
             parent = form;
-            //default_panel from db
+            profile = myProfile;
+
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection("Server=studmysql01.fhict.local;Uid=dbi486983;Database=dbi486983;Pwd=21092002;"))
+                {
+                    con.Open();
+                    MySqlCommand mySqlCommand = new("SELECT panel from profiles where id=@id",con);
+                    mySqlCommand.Parameters.AddWithValue("@id", myProfile.ID);
+                    string panelName = mySqlCommand.ExecuteScalar().ToString();
+
+                    if (panelName == null)
+                        panelName = "pnProfile";
+                    
+                    foreach (Control control in parent.Controls)
+                    {
+                        if (control.Name == panelName && control is Panel)
+                        {
+                            ChangeDefaultPanel(control as Panel);
+                            break;
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                foreach (Control control in parent.Controls)
+                {
+                    if (control.Name == "pnProfile" && control is Panel)
+                    {
+                        ChangeDefaultPanel(control as Panel);
+                        break;
+                    }
+                }
+            }
             LoadDefaultPanel();
         }
 
@@ -23,7 +61,7 @@
         {
             if (default_panel==null)
                 return;
-            
+
             foreach(Control control in parent.Controls)
             {
                 if (!control.Name.StartsWith("pn"))//change only pn panels(Library,Store,Profile)
@@ -37,7 +75,26 @@
 
         public void SaveChanges()
         {
-            //send vars to db
+            try 
+            {
+                using (MySqlConnection con = new("Server=studmysql01.fhict.local;Uid=dbi486983;Database=dbi486983;Pwd=21092002;"))
+                {
+                    con.Open();
+                    MySqlCommand command = new("UPDATE profiles SET panel=@panel WHERE id=@id", con);
+                    command.Parameters.AddWithValue("@panel",default_panel.Name);
+                    command.Parameters.AddWithValue("@id",profile.ID);
+
+                    int result = command.ExecuteNonQuery();
+
+                    if (result == 1) MessageBox.Show("Changes saved!");
+                    else MessageBox.Show("Changes could not be saved!");
+                }
+            }
+            catch(Exception ex)
+            {
+                if (ex is AggregateException) MessageBox.Show("No connection to the database");
+                else MessageBox.Show("Could not save settings changes." + ex.ToString());
+            }
         }
     }
 }

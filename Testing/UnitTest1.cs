@@ -38,7 +38,7 @@ namespace Testing
             Assert.AreEqual(1, effectedRows);
         }
 
-        [TestMethod]
+        //[TestMethod]
         public void GetData()
         {
             con.Open();

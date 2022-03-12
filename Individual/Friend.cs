@@ -1,26 +1,56 @@
-﻿namespace Individual
+﻿using MySql.Data.MySqlClient;
+
+namespace Individual
 {
     public partial class Friend : Form
     {
-        private ListBox listBox;
+        private ListBox lsbFriends;
         private Profile profile;
-        private ListBox listBox1;
+        private ListBox lsbActivity;
+        private MyProfile myProfile;
 
-        public Friend(Profile profile,ListBox listBox, ListBox listBox1)
+        public Friend(MyProfile myProfile,Profile profile,ListBox listBox, ListBox listBox1)
         {
             InitializeComponent();
             this.profile = profile;
-            this.listBox = listBox;
-            this.listBox1 = listBox1;
+            this.myProfile = myProfile;
+            lsbFriends = listBox;
+            lsbActivity = listBox1;
         }
 
         private void btnFriend_Click(object sender, EventArgs e)
         {
+            //Hide the button after adding friend
+            (sender as Button).Visible = false;
+
+            //Add friend and show it in activity
             profile.AddFriend();
-            listBox1.Items.Add($"Added {profile.Name} as a friend");
-            (sender as Button).Visible= false;
-            listBox.Items.Clear();
-            listBox.Items.AddRange(FriendList.friends.ToArray());
+            lsbActivity.Items.Add($"Added {profile.Name} as a friend");//send to db
+            
+            //Refresh friends list
+            lsbFriends.Items.Clear();
+            lsbFriends.Items.AddRange(FriendList.Friends.ToArray());
+
+            //Add friend in the database
+            using (MySqlConnection con =
+                new("Server=studmysql01.fhict.local;Uid=dbi486983;Database=dbi486983;Pwd=21092002;"))
+            {
+                con.Open();
+                MySqlCommand cmd = new(
+                "INSERT INTO friendship " +
+                "SELECT * FROM(SELECT @id AS name, @friend_id AS address) " +
+                "AS tmp WHERE NOT EXISTS" +
+                "(SELECT friend_id FROM friendship WHERE friend_id = @friend_id) " +
+                "LIMIT 1; ", con);
+
+                foreach (Profile profile in FriendList.Friends)
+                {
+                    cmd.Parameters.AddWithValue("@id", myProfile.ID);
+                    cmd.Parameters.AddWithValue("@friend_id", profile.ID);
+                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
+                }
+            }
         }
 
         private void Friend_Load(object sender, EventArgs e)
@@ -30,10 +60,10 @@
             Text = profile.Name;
             lbFriendDesc.Text = profile.Description;
 
-            if (FriendList.friends == null)
+            if (FriendList.Friends == null)
                 return;
 
-            foreach (Profile friend in FriendList.friends)
+            foreach (Profile friend in FriendList.Friends)
             {
                 if (friend.Name == profile.Name)
                 {

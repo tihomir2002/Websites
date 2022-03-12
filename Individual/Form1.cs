@@ -4,24 +4,24 @@ namespace Individual
     {
         private MyProfile profile;
         private Store store;
-        private FriendList friendsList;
         private Settings settings;
+        private Login loginForm;
 
-        public Form1()
+        public Form1(Login loginForm,MyProfile profile)
         {
             InitializeComponent();
-            
-            profile = new(0, "Tihomir", "Test development profile\n for Tihomir Ivanov", null);
-            //get profile info from db
-            settings = new(this);
+
+            this.loginForm= loginForm;
+            this.profile = profile;
+            settings = new(this,profile);
             store = new(profile);
-            friendsList = new(profile);
+            FriendList.Init(profile);
             lsbFriends.Items.Clear();
 
-            if (friendsList.Friends == null)
+            if (FriendList.Friends == null)
                 return;
 
-            foreach (var friend in friendsList.Friends)
+            foreach (var friend in FriendList.Friends)
             {
                 lsbFriends.Items.Add(friend);
             }
@@ -42,7 +42,7 @@ namespace Individual
             }
             else lbLibrary.Text = "No games owned";
             
-            lsbFoundFriends.Items.AddRange(friendsList.Profiles.ToArray());
+            lsbFoundFriends.Items.AddRange(FriendList.Profiles.ToArray());
         }
 
         private void btnChangeProfile_Click(object sender, EventArgs e)
@@ -60,16 +60,19 @@ namespace Individual
                 if(control is PictureBox)
                 {
                     PictureBox box = control as PictureBox;
+                    profile.Image = (Bitmap)box.Image;
                     pbProfilePicture.Image = box.Image;
                 }
                 if (control is TextBox && !string.IsNullOrWhiteSpace(control.Text))
                 {
                     TextBox box = control as TextBox;
+                    profile.Name = box.Text;
                     lbName.Text = box.Text;
                 }
                 if (control is RichTextBox && !string.IsNullOrWhiteSpace(control.Text))
                 {
                     RichTextBox box = control as RichTextBox;
+                    profile.Description = box.Text;
                     lbDesc.Text = box.Text;
                 }
             }
@@ -137,7 +140,13 @@ namespace Individual
             );
             comboBox.SelectedIndexChanged += ComboBox_SelectedIndexChanged;
             form.Text = "Settings";
+            form.FormClosing += Settings_Closing;
             form.Show();
+        }
+
+        private void Settings_Closing(object? sender, FormClosingEventArgs e)
+        {
+            settings.SaveChanges();
         }
 
         private void ComboBox_SelectedIndexChanged(object? sender, EventArgs e)
@@ -147,25 +156,28 @@ namespace Individual
             {
                 foreach (Control control in Controls)
                 {
-                    if (control.Name == comboBox.SelectedItem.ToString())
+                    if (control.Name == "pn"+comboBox.SelectedItem.ToString())
                         settings.ChangeDefaultPanel((Panel)control);
                 }
             }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            settings.SaveChanges();
-            friendsList.SaveChanges();
+        {   
+            //friendsList.SaveChanges();
             profile.SaveChanges();
             //check for others
+
+            if (!loginForm.Visible)
+                Application.Exit();            
         }
 
         private void lsbFriends_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(lsbFriends.SelectedIndex>=0)
             {
-                Friend friend = new Friend(friendsList.Profiles[lsbFriends.SelectedIndex],lsbFriends,lbActivity);
+                Friend friend = 
+                    new Friend(profile,FriendList.Friends.First(friend=>friend.Name==lsbFriends.SelectedItem.ToString()),lsbFriends,lbActivity);
                 friend.Show();
             }
         }
@@ -187,7 +199,8 @@ namespace Individual
         {
             if (lsbFriends.SelectedIndex >= 0)
             {
-                Friend friend = new Friend(friendsList.Profiles[lsbFriends.SelectedIndex], lsbFriends, lbActivity);
+                Friend friend = 
+                    new Friend(profile, FriendList.Friends.First(friend => friend.Name == lsbFriends.SelectedItem.ToString()), lsbFriends, lbActivity);
                 friend.Show();
             }
         }
@@ -253,20 +266,37 @@ namespace Individual
         private void tbFriend_TextChanged(object sender, EventArgs e)
         {
             lsbFoundFriends.Items.Clear();
-            if (tbFriend.Text.Length >= 1 && friendsList.Profiles.First(friend => friend.Name.StartsWith(tbFriend.Text)) != null)
-                lsbFoundFriends.Items.Add(friendsList.Profiles.First(friend => friend.Name.StartsWith(tbFriend.Text)));
+            if (tbUsers.Text.Length >= 1 && FriendList.Profiles.FirstOrDefault(friend => friend.Name.StartsWith(tbUsers.Text)) != null)
+                lsbFoundFriends.Items.AddRange(FriendList.Profiles.FindAll(friend => friend.Name.StartsWith(tbUsers.Text)).ToArray());
 
-            if (tbFriend.Text.Length < 1)
-                lsbFoundFriends.Items.AddRange(friendsList.Profiles.ToArray());
+            if (tbUsers.Text.Length < 1)
+                lsbFoundFriends.Items.AddRange(FriendList.Profiles.ToArray());
         }
 
         private void lsbFoundFriends_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lsbFoundFriends.SelectedIndex >= 0)
             {
-                Friend friend = new Friend(friendsList.Profiles[lsbFoundFriends.SelectedIndex], lsbFriends, lbActivity);
+                Friend friend = 
+                    new(profile, FriendList.Profiles.First(user => user.Name == lsbFoundFriends.SelectedItem.ToString()), lsbFriends, lbActivity);
                 friend.Show();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            loginForm.Show();
+            Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            lsbFriends.Items.Clear();
+            if (tbFriends.Text.Length >= 1 && FriendList.Friends.FirstOrDefault(friend => friend.Name.StartsWith(tbFriends.Text)) != null)
+                lsbFriends.Items.AddRange(FriendList.Friends.FindAll(friend => friend.Name.StartsWith(tbFriends.Text)).ToArray());
+
+            if (tbFriends.Text.Length < 1)
+                lsbFriends.Items.AddRange(FriendList.Friends.ToArray());
         }
     }
 }

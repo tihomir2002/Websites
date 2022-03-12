@@ -52,7 +52,7 @@
             this.pnFriends = new System.Windows.Forms.Panel();
             this.lsbFoundFriends = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbFriend = new System.Windows.Forms.TextBox();
+            this.tbUsers = new System.Windows.Forms.TextBox();
             this.lsbFriends = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pnStore = new System.Windows.Forms.Panel();
@@ -61,6 +61,9 @@
             this.lbStoreGameName = new System.Windows.Forms.Label();
             this.lbFoundGames = new System.Windows.Forms.ListBox();
             this.tbSearchGame = new System.Windows.Forms.TextBox();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbFriends = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             this.panel2.SuspendLayout();
@@ -326,9 +329,11 @@
             // 
             // pnFriends
             // 
+            this.pnFriends.Controls.Add(this.tbFriends);
+            this.pnFriends.Controls.Add(this.label2);
             this.pnFriends.Controls.Add(this.lsbFoundFriends);
             this.pnFriends.Controls.Add(this.label1);
-            this.pnFriends.Controls.Add(this.tbFriend);
+            this.pnFriends.Controls.Add(this.tbUsers);
             this.pnFriends.Controls.Add(this.lsbFriends);
             this.pnFriends.Controls.Add(this.label5);
             this.pnFriends.Location = new System.Drawing.Point(12, 33);
@@ -354,18 +359,18 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(480, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 15);
+            this.label1.Size = new System.Drawing.Size(55, 15);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Search a friend";
+            this.label1.Text = "Find user";
             // 
-            // tbFriend
+            // tbUsers
             // 
-            this.tbFriend.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbFriend.Location = new System.Drawing.Point(477, 27);
-            this.tbFriend.Name = "tbFriend";
-            this.tbFriend.Size = new System.Drawing.Size(282, 16);
-            this.tbFriend.TabIndex = 6;
-            this.tbFriend.TextChanged += new System.EventHandler(this.tbFriend_TextChanged);
+            this.tbUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbUsers.Location = new System.Drawing.Point(477, 27);
+            this.tbUsers.Name = "tbUsers";
+            this.tbUsers.Size = new System.Drawing.Size(282, 16);
+            this.tbUsers.TabIndex = 6;
+            this.tbUsers.TextChanged += new System.EventHandler(this.tbFriend_TextChanged);
             // 
             // lsbFriends
             // 
@@ -373,9 +378,9 @@
             this.lsbFriends.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lsbFriends.FormattingEnabled = true;
             this.lsbFriends.ItemHeight = 15;
-            this.lsbFriends.Location = new System.Drawing.Point(14, 9);
+            this.lsbFriends.Location = new System.Drawing.Point(14, 54);
             this.lsbFriends.Name = "lsbFriends";
-            this.lsbFriends.Size = new System.Drawing.Size(282, 409);
+            this.lsbFriends.Size = new System.Drawing.Size(183, 364);
             this.lsbFriends.TabIndex = 5;
             this.lsbFriends.SelectedIndexChanged += new System.EventHandler(this.lsbFriends_SelectedIndexChanged);
             // 
@@ -395,7 +400,7 @@
             this.pnStore.Controls.Add(this.lbStoreGameName);
             this.pnStore.Controls.Add(this.lbFoundGames);
             this.pnStore.Controls.Add(this.tbSearchGame);
-            this.pnStore.Location = new System.Drawing.Point(12, 35);
+            this.pnStore.Location = new System.Drawing.Point(12, 32);
             this.pnStore.Name = "pnStore";
             this.pnStore.Size = new System.Drawing.Size(779, 458);
             this.pnStore.TabIndex = 10;
@@ -467,12 +472,45 @@
             this.tbSearchGame.Click += new System.EventHandler(this.tbSearchGame_Click);
             this.tbSearchGame.TextChanged += new System.EventHandler(this.tbSearchGame_TextChanged);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(54)))), ((int)(((byte)(67)))));
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnLogout.Location = new System.Drawing.Point(646, 6);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 11;
+            this.btnLogout.Text = "Log out";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(14, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 15);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Friends";
+            // 
+            // tbFriends
+            // 
+            this.tbFriends.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbFriends.Location = new System.Drawing.Point(14, 28);
+            this.tbFriends.Name = "tbFriends";
+            this.tbFriends.Size = new System.Drawing.Size(183, 16);
+            this.tbFriends.TabIndex = 10;
+            this.tbFriends.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(800, 505);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.pnStore);
             this.Controls.Add(this.pnFriends);
             this.Controls.Add(this.pnLibrary);
@@ -526,7 +564,7 @@
         private ListBox lsbFriends;
         private Label label5;
         private Label label1;
-        private TextBox tbFriend;
+        private TextBox tbUsers;
         private ListBox lsbFoundFriends;
         private Panel pnStore;
         private Button btnBuy;
@@ -534,5 +572,8 @@
         private Label lbStoreGameName;
         private ListBox lbFoundGames;
         private TextBox tbSearchGame;
+        private Button btnLogout;
+        private Label label2;
+        private TextBox tbFriends;
     }
 }
