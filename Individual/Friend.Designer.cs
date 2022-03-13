@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRemoveFriend = new System.Windows.Forms.Button();
             this.btnFriend = new System.Windows.Forms.Button();
             this.lbFriendDesc = new System.Windows.Forms.Label();
             this.lbFriendName = new System.Windows.Forms.Label();
@@ -39,6 +40,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnRemoveFriend);
             this.panel1.Controls.Add(this.btnFriend);
             this.panel1.Controls.Add(this.lbFriendDesc);
             this.panel1.Controls.Add(this.lbFriendName);
@@ -47,6 +49,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(369, 136);
             this.panel1.TabIndex = 1;
+            // 
+            // btnRemoveFriend
+            // 
+            this.btnRemoveFriend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(54)))), ((int)(((byte)(67)))));
+            this.btnRemoveFriend.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRemoveFriend.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnRemoveFriend.Location = new System.Drawing.Point(137, 108);
+            this.btnRemoveFriend.Name = "btnRemoveFriend";
+            this.btnRemoveFriend.Size = new System.Drawing.Size(104, 23);
+            this.btnRemoveFriend.TabIndex = 4;
+            this.btnRemoveFriend.Text = "Remove friend";
+            this.btnRemoveFriend.UseVisualStyleBackColor = false;
+            this.btnRemoveFriend.Visible = false;
+            this.btnRemoveFriend.Click += new System.EventHandler(this.btnRemoveFriend_Click);
             // 
             // btnFriend
             // 
@@ -120,5 +136,6 @@
         private Label lbFriendName;
         private PictureBox pbProfilePicture;
         private Button btnFriend;
+        private Button btnRemoveFriend;
     }
 }
