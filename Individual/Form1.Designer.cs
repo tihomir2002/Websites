@@ -50,6 +50,8 @@
             this.lbTitle = new System.Windows.Forms.Label();
             this.lbLibrary = new System.Windows.Forms.ListBox();
             this.pnFriends = new System.Windows.Forms.Panel();
+            this.tbFriends = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.lsbFoundFriends = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbUsers = new System.Windows.Forms.TextBox();
@@ -62,8 +64,6 @@
             this.lbFoundGames = new System.Windows.Forms.ListBox();
             this.tbSearchGame = new System.Windows.Forms.TextBox();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbFriends = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             this.panel2.SuspendLayout();
@@ -262,9 +262,9 @@
             // 
             this.pnLibraryInfo.Controls.Add(this.lbGameDesc);
             this.pnLibraryInfo.Controls.Add(this.lbGameName);
-            this.pnLibraryInfo.Location = new System.Drawing.Point(140, 19);
+            this.pnLibraryInfo.Location = new System.Drawing.Point(189, 19);
             this.pnLibraryInfo.Name = "pnLibraryInfo";
-            this.pnLibraryInfo.Size = new System.Drawing.Size(471, 301);
+            this.pnLibraryInfo.Size = new System.Drawing.Size(422, 301);
             this.pnLibraryInfo.TabIndex = 4;
             this.pnLibraryInfo.Visible = false;
             // 
@@ -323,7 +323,7 @@
             this.lbLibrary.ItemHeight = 15;
             this.lbLibrary.Location = new System.Drawing.Point(14, 19);
             this.lbLibrary.Name = "lbLibrary";
-            this.lbLibrary.Size = new System.Drawing.Size(120, 420);
+            this.lbLibrary.Size = new System.Drawing.Size(169, 420);
             this.lbLibrary.TabIndex = 0;
             this.lbLibrary.SelectedIndexChanged += new System.EventHandler(this.lbLibrary_SelectedIndexChanged);
             // 
@@ -340,6 +340,25 @@
             this.pnFriends.Name = "pnFriends";
             this.pnFriends.Size = new System.Drawing.Size(773, 439);
             this.pnFriends.TabIndex = 8;
+            // 
+            // tbFriends
+            // 
+            this.tbFriends.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbFriends.Location = new System.Drawing.Point(14, 28);
+            this.tbFriends.Name = "tbFriends";
+            this.tbFriends.Size = new System.Drawing.Size(183, 16);
+            this.tbFriends.TabIndex = 10;
+            this.tbFriends.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(14, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 15);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Friends";
             // 
             // lsbFoundFriends
             // 
@@ -485,25 +504,6 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(14, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 15);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Friends";
-            // 
-            // tbFriends
-            // 
-            this.tbFriends.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbFriends.Location = new System.Drawing.Point(14, 28);
-            this.tbFriends.Name = "tbFriends";
-            this.tbFriends.Size = new System.Drawing.Size(183, 16);
-            this.tbFriends.TabIndex = 10;
-            this.tbFriends.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -518,6 +518,7 @@
             this.Controls.Add(this.pnProfile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
+            this.Text = "Gaming platform inspired by Steam";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);

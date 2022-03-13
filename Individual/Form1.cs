@@ -84,7 +84,6 @@ namespace Individual
             pnProfile.Visible = false;
             pnStore.Visible = true;
             pnFriends.Visible = false;
-            Text = "Store";
         }
 
         private void btnLibrary_Click(object sender, EventArgs e)
@@ -93,8 +92,6 @@ namespace Individual
             pnProfile.Visible = false;
             pnFriends.Visible = false;
             pnStore.Visible = false;
-
-            Text = "Library";
         }
 
         private void btnFriends_Click(object sender, EventArgs e)
@@ -102,7 +99,6 @@ namespace Individual
             pnLibrary.Visible = false;
             pnProfile.Visible = false;
             pnFriends.Visible = true;
-            Text = "Friends";
             pnStore.Visible = false;
         }
 
@@ -111,7 +107,6 @@ namespace Individual
             pnLibrary.Visible = false;
             pnFriends.Visible = false;
             pnProfile.Visible = true;
-            Text = "Profile";
             pnStore.Visible = false;
         }
 
@@ -164,7 +159,6 @@ namespace Individual
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {   
-            //friendsList.SaveChanges();
             profile.SaveChanges();
             //check for others
 
@@ -189,8 +183,8 @@ namespace Individual
                 pnLibraryInfo.Visible = true;
                 lbGameName.Visible = true;
                 lbGameDesc.Visible = true;
-                lbGameName.Text = store.Games[lbLibrary.SelectedIndex].Name;
-                lbGameDesc.Text = store.Games[lbLibrary.SelectedIndex].Description;
+                lbGameName.Text = profile.Owned_Games[lbLibrary.SelectedIndex].Name;
+                lbGameDesc.Text = profile.Owned_Games[lbLibrary.SelectedIndex].Description;
             }
             else { lbGameDesc.Text = ""; lbGameName.Text = ""; }
         }
@@ -255,6 +249,7 @@ namespace Individual
             btnBuy.Text = "Owned";
             btnBuy.Enabled = false;
             store.BuyGame(store.SearchGame(lbStoreGameName.Text));
+            lbLibrary.Items.Clear();
             lbLibrary.Items.AddRange(profile.Owned_Games.ToArray());
         }
 

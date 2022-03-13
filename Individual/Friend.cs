@@ -32,24 +32,35 @@ namespace Individual
             lsbFriends.Items.AddRange(FriendList.Friends.ToArray());
 
             //Add friend in the database
-            using (MySqlConnection con =
-                new("Server=studmysql01.fhict.local;Uid=dbi486983;Database=dbi486983;Pwd=21092002;"))
+            try
             {
-                con.Open();
-                MySqlCommand cmd = new(
-                "INSERT INTO friendship " +
-                "SELECT * FROM(SELECT @id AS name, @friend_id AS address) " +
-                "AS tmp WHERE NOT EXISTS" +
-                "(SELECT friend_id FROM friendship WHERE friend_id = @friend_id) " +
-                "LIMIT 1; ", con);
-
-                foreach (Profile profile in FriendList.Friends)
+                using (MySqlConnection con =
+                new("Server=studmysql01.fhict.local;Uid=dbi486983;Database=dbi486983;Pwd=21092002;"))
                 {
-                    cmd.Parameters.AddWithValue("@id", myProfile.ID);
-                    cmd.Parameters.AddWithValue("@friend_id", profile.ID);
-                    cmd.ExecuteNonQuery();
-                    cmd.Parameters.Clear();
+                    con.Open();
+                    MySqlCommand cmd = new(
+                    "INSERT INTO friendship " +
+                    "SELECT * FROM(SELECT @id AS name, @friend_id AS address) " +
+                    "AS tmp WHERE NOT EXISTS" +
+                    "(SELECT friend_id FROM friendship WHERE friend_id = @friend_id) " +
+                    "LIMIT 1; ", con);
+
+                    foreach (Profile profile in FriendList.Friends)
+                    {
+                        cmd.Parameters.AddWithValue("@id", myProfile.ID);
+                        cmd.Parameters.AddWithValue("@friend_id", profile.ID);
+                        cmd.ExecuteNonQuery();
+                        cmd.Parameters.Clear();
+                    }
                 }
+            }
+            catch(AggregateException)
+            {
+                MessageBox.Show("You need a vpn connection.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error saving friend:" + ex.ToString());
             }
         }
 
