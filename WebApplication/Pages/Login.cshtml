@@ -1,4 +1,22 @@
-﻿@page
+﻿@page "/"
 @model WebApplication.Pages.LoginModel
 @{
+    ViewData["Title"] = "Steam-inspired gaming platform";
 }
+
+<div class="text-center">
+    <h2 class="display-4">Welcome to Steam-inspired gaming platform</h2>
+</div>
+
+<div class="form_container d-flex align-items-center justify-content-center">
+    <form method="post">
+        <label asp-for="User.Username">Name:</label>
+        <input type="text" name="username" value=""/>
+        <label asp-for="User.Password">Password:</label>
+        <input type="text" name="password" value="" />
+
+        <div class="button_container d-flex align-items-center justify-content-center">
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+</div>
