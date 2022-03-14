@@ -1,4 +1,6 @@
-For desktop login  use:
+Repository link: https://git.fhict.nl/I486983/s2-individual-project
+
+For desktop login use one of these:
 username1 password1
 username2 password2
 username3 password3

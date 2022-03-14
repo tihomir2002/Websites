@@ -1,0 +1,44 @@
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+h1,h2,h3{
+    color:white;
+}
+
+h2{
+    padding-top:5%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-image: url('../img/262656-full-size-4k-gaming-wallpapers-1920x1080-full-hd.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+footer{
+    background-color:white;
+}
+
+#Link {
+    font-size: 20px;
+}
+
+#ReadMore {
+    text-decoration:none;
+    color:cadetblue;
+}
+
+#ReadMore:hover{
+    color:grey;
+}
