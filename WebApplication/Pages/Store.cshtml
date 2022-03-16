@@ -4,7 +4,7 @@
 	ViewData["Title"]="Games managment";
 }
 
-<div class="text-center" onload="LoadTableData()">
+<div class="text-center">
     <h2>Want to start a sale? Game not being distributed?</h2>
     <h3>Change game parameters here</h3>
 </div>
@@ -20,7 +20,7 @@
      </tr>
         @foreach (var item in GamesTable.Games)
         {
-            <tr>
+            <tr Onclick="EditGame(id)" id=@item.ID.ToString()>
                 <td>@item.ID</td>
                 <td>@item.Name</td>
                 <td>@item.Description</td>
@@ -33,3 +33,13 @@
         <h2 class="text-center">No games available for buying :(</h2>
     }
 </table>
+
+@section Scripts
+{
+    <script>
+        function EditGame(id)
+        {	
+            //window.location.href = "";//change game page
+        }
+    </script>
+}
