@@ -1,4 +1,30 @@
 ﻿@page
 @model WebApplication.Pages.LibraryModel
 @{
+		ViewData["Title"]="Owned games";
 }
+
+<h2 class="text-center">Check out your amazing gaming library.
+    <br>Use the desktop app to buy another game.</h2>
+
+<table class="table">
+ @if(@GamesTable.OwnedGames.Count>0)
+ {
+	 <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+    </tr>
+    
+    @foreach (var item in GamesTable.OwnedGames)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Description</td>
+        </tr>
+    }
+ }
+ else {
+     <h2 class="text-center">You do not own any games :(</h2>
+ }
+</table>
+

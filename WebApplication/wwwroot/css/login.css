@@ -1,0 +1,24 @@
+﻿#Form{
+    margin-top:5%;
+}
+
+#SubmitBtn {
+    color: black;
+    margin-top: 2%;
+    background-color: cadetblue;
+    border-radius: 25%;
+}
+
+    #SubmitBtn:hover {
+        background-color: lightgrey;
+        border-radius: 10%;
+        transition-duration: 0.4s;
+    }
+
+label {
+    color: white;
+}
+
+header {
+    visibility:hidden;
+}

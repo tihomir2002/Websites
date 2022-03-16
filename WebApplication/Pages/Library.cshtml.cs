@@ -7,6 +7,7 @@ namespace WebApplication.Pages
     {
         public void OnGet()
         {
+            GamesTable.GetOwnedGames();
         }
     }
 }

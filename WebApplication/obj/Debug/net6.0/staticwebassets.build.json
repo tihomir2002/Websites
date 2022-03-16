@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "R/4rMndFNJl8b5sXshVkGM9IslOQfQ1Nxw6/O+A226Q=",
+  "Hash": "zsIfxXK7/IoxwQ9RXMDY9aq3d040M9nOhHv5fqz54Ug=",
   "Source": "WebApplication",
   "BasePath": "_content/WebApplication",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebApplication.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\css\\login.css",
+      "SourceId": "WebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
+      "BasePath": "_content/WebApplication",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
       "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\css\\site.css",

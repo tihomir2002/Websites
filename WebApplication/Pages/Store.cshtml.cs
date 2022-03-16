@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace WebApplication.Pages
@@ -7,6 +6,7 @@ namespace WebApplication.Pages
     {
         public void OnGet()
         {
+            GamesTable.GetGames();
         }
     }
 }

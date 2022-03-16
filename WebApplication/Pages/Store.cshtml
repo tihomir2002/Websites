@@ -4,7 +4,32 @@
 	ViewData["Title"]="Games managment";
 }
 
-<div class="text-center">
+<div class="text-center" onload="LoadTableData()">
     <h2>Want to start a sale? Game not being distributed?</h2>
     <h3>Change game parameters here</h3>
 </div>
+
+<table class="table">
+   @if(@GamesTable.Games.Count>0)
+    {
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+     </tr>
+        @foreach (var item in GamesTable.Games)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.Price$</td>
+           </tr>
+        }
+    }
+    else
+    {
+        <h2 class="text-center">No games available for buying :(</h2>
+    }
+</table>

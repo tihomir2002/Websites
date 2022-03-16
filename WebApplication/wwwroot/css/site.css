@@ -18,6 +18,10 @@ h2{
     padding-top:5%;
 }
 
+header {
+    visibility: visible;
+}
+
 body {
     margin-bottom: 60px;
     background-image: url('../img/262656-full-size-4k-gaming-wallpapers-1920x1080-full-hd.jpg');
@@ -26,8 +30,16 @@ body {
     background-size: cover;
 }
 
-label{
-    color:black;
+table{
+    background-color:darkslategrey;
+}
+
+tr{
+    color:white;
+}
+
+tr:hover{
+    background-color:lightslategray;
 }
 
 footer{

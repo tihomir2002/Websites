@@ -1,14 +1,14 @@
 ﻿using MySql.Data.MySqlClient;
-using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication
 {
     public class User
     {
-        [Required]
+        public static int ID { get; set; }
         public string Username { get; set; }
-        [Required]
         public string Password { get; set; }
+        public static string Name { get; set; }
+        public static string Description { get; set; }
 
         public User()
         {
@@ -27,12 +27,17 @@ namespace WebApplication
                     while (mySqlDataReader.Read())
                     {
                         if (mySqlDataReader["username"].ToString() == Username && mySqlDataReader["password"].ToString() == Password)
+                        {
+                            ID = mySqlDataReader.GetInt32(0);
+                            Name = mySqlDataReader.GetString(1);
+                            Description = mySqlDataReader.GetString(2);
                             return true;
+                        }
                     }
                 }
                 return false;
             }
-            catch { return false; }
+            catch {  return false; }
         }
     }
 }
