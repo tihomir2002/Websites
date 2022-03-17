@@ -1,11 +1,15 @@
 ﻿using MySql.Data.MySqlClient;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication
 {
     public class User
     {
         public static int ID { get; set; }
+        [Required(ErrorMessage = "You need to type an username")]
         public string Username { get; set; }
+        [Required(ErrorMessage = "You need to type a password")]
+        [StringLength(5, ErrorMessage = "The password is too short")]
         public string Password { get; set; }
         public static string Name { get; set; }
         public static string Description { get; set; }
