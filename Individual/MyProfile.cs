@@ -4,21 +4,21 @@ namespace Individual
 {
     public class MyProfile : User
     {
-        private List<Game> owned_games;
+        private List<Game> ownedGames;
 
-        public List<Game> Owned_Games { get => owned_games; }
+        public List<Game> OwnedGames { get => ownedGames; set => ownedGames = value; }
         
         public MyProfile(int id, string name, string description, Bitmap image)
         {
             this.id = id;
             this.name = name;
             this.description = description;
+            ownedGames = new();
 
             if (image == null)
                 this.image = Properties.Resources.DefaultImage;
             else this.image = image;
 
-            owned_games = new();
         }
 
         public void ChangeProfile(string name, string description, Bitmap image)

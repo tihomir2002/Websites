@@ -15,41 +15,21 @@ namespace Individual
             parent = form;
             profile = myProfile;
 
-            try
-            {
-                using (MySqlConnection con = new MySqlConnection("Server=studmysql01.fhict.local;Uid=dbi486983;Database=dbi486983;Pwd=21092002;"))
-                {
-                    con.Open();
-                    MySqlCommand mySqlCommand = new("SELECT panel from profiles where id=@id",con);
-                    mySqlCommand.Parameters.AddWithValue("@id", myProfile.ID);
-                    string panelName = mySqlCommand.ExecuteScalar().ToString();
-
-                    if (panelName == null)
-                        panelName = "pnProfile";
-                    
-                    foreach (Control control in parent.Controls)
-                    {
-                        if (control.Name == panelName && control is Panel)
-                        {
-                            ChangeDefaultPanel(control as Panel);
-                            break;
-                        }
-                    }
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-                foreach (Control control in parent.Controls)
-                {
-                    if (control.Name == "pnProfile" && control is Panel)
-                    {
-                        ChangeDefaultPanel(control as Panel);
-                        break;
-                    }
-                }
-            }
+            SetDefaultPanel(myProfile.ID);
             LoadDefaultPanel();
+        }
+        
+        private void SetDefaultPanel(int myProfileID)
+        {
+            string panelName = new Database().GetDefaultPanel(myProfileID);
+            foreach (Control control in parent.Controls)
+            {
+                if (control.Name == panelName && control is Panel)
+                {
+                    ChangeDefaultPanel(control as Panel);
+                    break;
+                }
+            }
         }
 
         public void ChangeDefaultPanel(Panel panel)

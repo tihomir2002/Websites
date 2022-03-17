@@ -33,9 +33,9 @@ namespace Individual
             lbName.Text = $"{profile.Name}";
             lbDesc.Text = profile.Description;
             
-            if (store.Games != null)
+            if (store.AvailableGames != null)
             {
-                foreach(Game game in profile.Owned_Games)
+                foreach(Game game in profile.OwnedGames)
                 {
                     lbLibrary.Items.Add(game.Name);
                 }
@@ -171,7 +171,7 @@ namespace Individual
             if(lsbFriends.SelectedIndex>=0)
             {
                 Friend friend = 
-                    new Friend(profile,FriendList.Friends.First(friend=>friend.Name==lsbFriends.SelectedItem.ToString()),lsbFriends,lbActivity);
+                    new Friend(FriendList.Friends.First(friend=>friend.Name==lsbFriends.SelectedItem.ToString()),lsbFriends,lbActivity);
                 friend.Show();
             }
         }
@@ -183,8 +183,8 @@ namespace Individual
                 pnLibraryInfo.Visible = true;
                 lbGameName.Visible = true;
                 lbGameDesc.Visible = true;
-                lbGameName.Text = profile.Owned_Games[lbLibrary.SelectedIndex].Name;
-                lbGameDesc.Text = profile.Owned_Games[lbLibrary.SelectedIndex].Description;
+                lbGameName.Text = profile.OwnedGames[lbLibrary.SelectedIndex].Name;
+                lbGameDesc.Text = profile.OwnedGames[lbLibrary.SelectedIndex].Description;
             }
             else { lbGameDesc.Text = ""; lbGameName.Text = ""; }
         }
@@ -194,7 +194,7 @@ namespace Individual
             if (lsbFriends.SelectedIndex >= 0)
             {
                 Friend friend = 
-                    new Friend(profile, FriendList.Friends.First(friend => friend.Name == lsbFriends.SelectedItem.ToString()), lsbFriends, lbActivity);
+                    new Friend(FriendList.Friends.First(friend => friend.Name == lsbFriends.SelectedItem.ToString()), lsbFriends, lbActivity);
                 friend.Show();
             }
         }
@@ -202,7 +202,7 @@ namespace Individual
         private void tbSearchGame_TextChanged(object sender, EventArgs e)
         {
             lbFoundGames.Items.Clear();
-            if(store.Games==null)
+            if(store.AvailableGames == null)
             {
                 lbLibrary.Items.Add("No games available");
                 return;
@@ -215,7 +215,7 @@ namespace Individual
                 btnBuy.Visible = false;
             }
 
-            foreach (Game game in store.Games)
+            foreach (Game game in store.AvailableGames)
             {
                 if(game.Name.StartsWith(tbSearchGame.Text))
                     lbFoundGames.Items.Add(game);
@@ -229,16 +229,16 @@ namespace Individual
                 lbStoreGameDesc.Visible = true;
                 lbStoreGameName.Visible = true;
                 btnBuy.Visible = true;
-                lbStoreGameName.Text = store.Games[lbFoundGames.SelectedIndex].Name;
-                lbStoreGameDesc.Text = store.Games[lbFoundGames.SelectedIndex].Description;
-                if (profile.Owned_Games.FirstOrDefault(game => game.Name == store.Games[lbFoundGames.SelectedIndex].Name) != null)
+                lbStoreGameName.Text = store.AvailableGames[lbFoundGames.SelectedIndex].Name;
+                lbStoreGameDesc.Text = store.AvailableGames[lbFoundGames.SelectedIndex].Description;
+                if (profile.OwnedGames.FirstOrDefault(game => game.Name == store.AvailableGames[lbFoundGames.SelectedIndex].Name) != null)
                 {
                     btnBuy.Text = "Owned";
                     btnBuy.Enabled = false;
                 }
                 else
                 {
-                    btnBuy.Text = $"Buy - {store.Games[lbFoundGames.SelectedIndex].Price}$";
+                    btnBuy.Text = $"Buy - {store.AvailableGames[lbFoundGames.SelectedIndex].Price}$";
                     btnBuy.Enabled = true;
                 }
             }
@@ -250,7 +250,7 @@ namespace Individual
             btnBuy.Enabled = false;
             store.BuyGame(store.SearchGame(lbStoreGameName.Text));
             lbLibrary.Items.Clear();
-            lbLibrary.Items.AddRange(profile.Owned_Games.ToArray());
+            lbLibrary.Items.AddRange(profile.OwnedGames.ToArray());
         }
 
         private void tbSearchGame_Click(object sender, EventArgs e)
@@ -273,7 +273,7 @@ namespace Individual
             if (lsbFoundFriends.SelectedIndex >= 0)
             {
                 Friend friend = 
-                    new(profile, FriendList.Profiles.First(user => user.Name == lsbFoundFriends.SelectedItem.ToString()), lsbFriends, lbActivity);
+                    new(FriendList.Profiles.First(user => user.Name == lsbFoundFriends.SelectedItem.ToString()), lsbFriends, lbActivity);
                 friend.Show();
             }
         }

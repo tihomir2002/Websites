@@ -137,10 +137,6 @@
             this.lbActivity.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbActivity.FormattingEnabled = true;
             this.lbActivity.ItemHeight = 15;
-            this.lbActivity.Items.AddRange(new object[] {
-            "Played Game1 ",
-            "Played Game1",
-            "Added Friend1 as a friend"});
             this.lbActivity.Location = new System.Drawing.Point(18, 145);
             this.lbActivity.Name = "lbActivity";
             this.lbActivity.SelectionMode = System.Windows.Forms.SelectionMode.None;
