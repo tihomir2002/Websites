@@ -5,19 +5,19 @@
     <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
 }
 
-<div class="text-center">
+<div id="Welcome">
     <h2 class="display-4">Welcome to Steam-inspired gaming platform</h2>
 </div>
 
-<div class="form_container d-flex align-items-center justify-content-center" id="Form">
+<div id="Form">
     <form method="post">
         <label asp-for="User.Username">Name:</label>
         <input type="text" name="username" value=""/>
         <label asp-for="User.Password">Password:</label>
         <input type="password" name="password" value="" />
 
-        <div class="button_container d-flex align-items-center justify-content-center">
-            <input id="SubmitBtn" type="submit" value="Submit" />
+        <div>
+            <input id="SubmitBtn" type="submit" value="Login" />
         </div>
     </form>
 </div>

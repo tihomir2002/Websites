@@ -1,5 +1,9 @@
-﻿#Form{
-    margin-top:5%;
+﻿#Welcome{
+    text-align:center;
+}
+
+#Form{
+    text-align:center;
 }
 
 #SubmitBtn {
@@ -9,7 +13,7 @@
     border-radius: 25%;
 }
 
-    #SubmitBtn:hover {
+#SubmitBtn:hover {
         background-color: lightgrey;
         border-radius: 10%;
         transition-duration: 0.4s;
@@ -17,6 +21,20 @@
 
 label {
     color: white;
+}
+
+footer{
+    text-align:center;
+    background-color:transparent;
+    color:white;
+}
+
+a{
+    visibility:hidden;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {

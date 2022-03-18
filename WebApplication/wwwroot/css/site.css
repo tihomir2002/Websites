@@ -12,6 +12,7 @@ html {
 
 h1,h2,h3{
     color:white;
+    text-align:center;
 }
 
 h2{
@@ -22,16 +23,42 @@ header {
     visibility: visible;
 }
 
+a {
+    visibility: visible;
+}
+
 body {
     margin-bottom: 60px;
     background-image: url('../img/262656-full-size-4k-gaming-wallpapers-1920x1080-full-hd.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-table{
-    background-color:darkslategrey;
+table {
+    background-color: darkslategrey;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    text-align:center;
+    color:white;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+li {
+    width: 10%;
+    text-align: center;
 }
 
 tr{
@@ -42,12 +69,16 @@ tr:hover{
     background-color:lightslategray;
 }
 
-footer{
-    background-color:white;
+footer {
+    text-align: center;
+    background-color: transparent;
+    color: white;
 }
 
 #Link {
     font-size: 20px;
+    color:white;
+    text-decoration:none;
 }
 
 #ReadMore {
