@@ -250,7 +250,10 @@ namespace Individual
             btnBuy.Enabled = false;
             store.BuyGame(store.SearchGame(lbStoreGameName.Text));
             lbLibrary.Items.Clear();
-            lbLibrary.Items.AddRange(profile.OwnedGames.ToArray());
+            foreach(Game game in profile.OwnedGames)
+            {
+                lbLibrary.Items.Add(game.Name);
+            }
         }
 
         private void tbSearchGame_Click(object sender, EventArgs e)

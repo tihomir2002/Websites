@@ -20,13 +20,14 @@
         }
 
         public void AddFriend()
-        {
+        {            
             FriendList.Friends.Add(this);
             database.AddFriend(myProfile.ID,ID);
         }
 
         public void RemoveFriend()
         {
+            if (!FriendList.Friends.Contains(this)) return;
             FriendList.Friends.Remove(this);
             database.RemoveFriend(myProfile.ID,ID);
         }

@@ -858,11 +858,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\VisualStudio\\S2_Project\\Individual\\Individual.csproj",
+      "projectUniqueName": "C:\\Users\\Tisho\\Desktop\\s2-individual-project-master\\Individual\\Individual.csproj",
       "projectName": "Individual",
-      "projectPath": "D:\\Projects\\VisualStudio\\S2_Project\\Individual\\Individual.csproj",
+      "projectPath": "C:\\Users\\Tisho\\Desktop\\s2-individual-project-master\\Individual\\Individual.csproj",
       "packagesPath": "C:\\Users\\Tisho\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\VisualStudio\\S2_Project\\Individual\\obj\\",
+      "outputPath": "C:\\Users\\Tisho\\Desktop\\s2-individual-project-master\\Individual\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Tisho\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -914,7 +914,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

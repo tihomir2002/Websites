@@ -21,6 +21,9 @@ h2{
 
 header {
     visibility: visible;
+    background-color:whitesmoke;
+    color:black;
+    top:0;
 }
 
 a {
@@ -61,6 +64,17 @@ li {
     text-align: center;
 }
 
+li:hover{
+    background-color:darkslategrey;
+    transition-duration:.1s;
+}
+
+li:active{
+    background-color:steelblue;
+    border-radius:35% 35%;
+    transition-duration:.05s;
+}
+
 tr{
     color:white;
 }
@@ -69,15 +83,9 @@ tr:hover{
     background-color:lightslategray;
 }
 
-footer {
-    text-align: center;
-    background-color: transparent;
-    color: white;
-}
-
 #Link {
     font-size: 20px;
-    color:white;
+    color:black;
     text-decoration:none;
 }
 
@@ -88,4 +96,12 @@ footer {
 
 #ReadMore:hover{
     color:grey;
+}
+
+.footer {
+    background-color: whitesmoke;
+    color: black;
+    text-align: center;
+    position: fixed;
+    left:0;
 }

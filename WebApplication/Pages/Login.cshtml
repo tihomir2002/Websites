@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Steam-inspired gaming platform";
     <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+    <partial name = "_ValidationScriptsPartial" />
 }
 
 <div id="Welcome">
@@ -12,9 +13,12 @@
 <div id="Form">
     <form method="post">
         <label asp-for="User.Username">Name:</label>
-        <input type="text" name="username" value=""/>
+        <span asp-validation-for="User.Username"></span>
+        <input type="text" asp-for="User.Username" value=""/>
+
         <label asp-for="User.Password">Password:</label>
-        <input type="password" name="password" value="" />
+        <span asp-validation-for="User.Password"></span>
+        <input type="password" asp-for="User.Password" value="" />
 
         <div>
             <input id="SubmitBtn" type="submit" value="Login" />

@@ -10,9 +10,6 @@ namespace WebApplication.Pages
 
         public IActionResult OnPost()
         {
-            User.Username = Request.Form["username"];
-            User.Password = Request.Form["password"];
-
             if (ModelState.IsValid && User.TryLogin())
             {
                 return new RedirectToPageResult("Home");

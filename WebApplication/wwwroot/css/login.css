@@ -2,8 +2,13 @@
     text-align:center;
 }
 
-#Form{
+form {
     text-align:center;
+    display: grid;
+    justify-content: center;
+    gap: 4px;
+    width: 25%;
+    margin-left:36.5%;
 }
 
 #SubmitBtn {
@@ -17,26 +22,24 @@
         background-color: lightgrey;
         border-radius: 10%;
         transition-duration: 0.4s;
-    }
+}
+
+input{
+    border-radius:10%;
+}
 
 label {
     color: white;
 }
 
-footer{
-    text-align:center;
-    background-color:transparent;
-    color:white;
-}
-
-a{
-    visibility:hidden;
+header,a{
+    visibility: hidden;
 }
 
 body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
-    visibility:hidden;
+span{
+    color:white;
 }

@@ -8,6 +8,7 @@ namespace WebApplication
         public static int ID { get; set; }
         [Required(ErrorMessage = "You need to type an username")]
         public string Username { get; set; }
+        
         [Required(ErrorMessage = "You need to type a password")]
         public string Password { get; set; }
         public static string Name { get; set; }
@@ -15,6 +16,12 @@ namespace WebApplication
 
         public User()
         {
+        }
+
+        public User(string username, string password)
+        {
+            Username = username;
+            Password = password;
         }
 
         public bool TryLogin()

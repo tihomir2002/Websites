@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "K+0p2IKwrTpsusH9fdW2bm5+pFUr2AjHN1K1N6dLTFM=",
+  "Hash": "lGCa0ATVsYrWDLW1MASlb90cDobxnobUd/nOz31gYPg=",
   "Source": "WebApplication",
   "BasePath": "_content/WebApplication",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "WebApplication\\wwwroot",
       "Source": "WebApplication",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\obj\\Debug\\net6.0\\scopedcss\\bundle\\WebApplication.styles.css",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\obj\\Debug\\net6.0\\scopedcss\\bundle\\WebApplication.styles.css",
       "SourceId": "WebApplication",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "WebApplication.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\obj\\Debug\\net6.0\\scopedcss\\bundle\\WebApplication.styles.css"
+      "OriginalItemSpec": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\obj\\Debug\\net6.0\\scopedcss\\bundle\\WebApplication.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebApplication.bundle.scp.css",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebApplication.bundle.scp.css",
       "SourceId": "WebApplication",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "WebApplication.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebApplication.bundle.scp.css"
+      "OriginalItemSpec": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebApplication.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\css\\login.css",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\css\\login.css",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "css/login.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\css\\site.css",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\css\\site.css",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\favicon.ico",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\favicon.ico",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\img\\262656-full-size-4k-gaming-wallpapers-1920x1080-full-hd.jpg",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\img\\262656-full-size-4k-gaming-wallpapers-1920x1080-full-hd.jpg",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "img/262656-full-size-4k-gaming-wallpapers-1920x1080-full-hd.jpg",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\img\\262656-full-size-4k-gaming-wallpapers-1920x1080-full-hd.jpg"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\js\\site.js",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\js\\site.js",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Tisho\\Desktop\\S2\\s2-individual-project-master\\WebApplication\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\VisualStudio\\S2_Project\\WebApplication\\wwwroot\\",
       "BasePath": "_content/WebApplication",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",

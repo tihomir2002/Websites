@@ -26,10 +26,10 @@ namespace Individual
         public void BuyGame(Game game)
         {
             myProfile.OwnedGames.Add(game);
-            SaveChanges();
+            SaveChanges(game);
         }
 
-        public void SaveChanges()
+        public void SaveChanges(Game game)
         {
             try
             {
@@ -38,19 +38,10 @@ namespace Individual
                 {
                     con.Open();
                     MySqlCommand cmd = new(
-                                        "INSERT INTO owned_games " +
-                                        "SELECT * FROM(SELECT @id AS game_id, @owner_id AS owner) " +
-                                        "AS tmp WHERE NOT EXISTS" +
-                                        "(SELECT id FROM owned_games WHERE id = @id) " +
-                                        "LIMIT 1; ", con);
-
-                    foreach (Game game in myProfile.OwnedGames)
-                    {
-                        cmd.Parameters.AddWithValue("@id",game.ID);
-                        cmd.Parameters.AddWithValue("@owner_id", myProfile.ID);
-                        cmd.ExecuteNonQuery();
-                        cmd.Parameters.Clear();
-                    }
+                                        "INSERT INTO owned_games VALUES(@id,@owner_id) ", con);
+                   cmd.Parameters.AddWithValue("@id",game.ID);
+                   cmd.Parameters.AddWithValue("@owner_id", myProfile.ID);
+                   cmd.ExecuteNonQuery();
                 }
             }
             catch (AggregateException) { MessageBox.Show("You need a vpn connection."); }

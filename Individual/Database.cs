@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace Individual
 {
@@ -78,19 +79,12 @@ namespace Individual
                 {
                     con.Open();
                     MySqlCommand cmd = new(
-                    "INSERT INTO friendship " +
-                    "SELECT * FROM(SELECT @id AS name, @friend_id AS address) " +
-                    "AS tmp WHERE NOT EXISTS" +
-                    "(SELECT friend_id FROM friendship WHERE friend_id = @friend_id) " +
-                    "LIMIT 1; ", con);
-
-                    foreach (Profile profile in FriendList.Friends)
-                    {
-                        cmd.Parameters.AddWithValue("@id", myProfileID);
-                        cmd.Parameters.AddWithValue("@friend_id", friendID);
-                        cmd.ExecuteNonQuery();
-                        cmd.Parameters.Clear();
-                    }
+                    "INSERT INTO friendship(id,friend_id) VALUES(@id,@friend_id)", con);
+                     cmd.Parameters.AddWithValue("@id", myProfileID);
+                     cmd.Parameters.AddWithValue("@friend_id", friendID);
+                     cmd.ExecuteNonQuery();
+                     cmd.CommandText = "INSERT INTO friendship(id,friend_id) VALUES(@friend_id,@id)";
+                    cmd.ExecuteNonQuery();
                 }
             }
             catch (AggregateException)
@@ -110,7 +104,8 @@ namespace Individual
                 using (MySqlConnection con = new(connection))
                 {
                     con.Open();
-                    MySqlCommand cmd = new("DELETE FROM friendship WHERE @id=id AND @friend_id=friend_id", con);
+                    MySqlCommand cmd = new("DELETE FROM friendship WHERE (@id=id " +
+                        "AND @friend_id=friend_id) or (@friend_id=id and @id=friend_id)", con);
 
                     cmd.Parameters.AddWithValue("@id", myProfileID);
                     cmd.Parameters.AddWithValue("@friend_id", friendID);
@@ -188,8 +183,9 @@ namespace Individual
                 using (MySqlConnection con = new(connection))
                 {
                     con.Open();
-                    MySqlCommand mySqlCommand = new("SELECT * FROM profiles " +
-                   "WHERE id IN(SELECT friend_id from friendship WHERE @id=id)",con);
+                    MySqlCommand mySqlCommand = new("select* from profiles where id " +
+                        "in(select friend_id from friendship where id=@id)" +
+                        " or id in (select id from friendship where friend_id=@id)",con);
                     mySqlCommand.Parameters.AddWithValue("@id", myProfile.ID);
 
                     MySqlDataReader dataReader = mySqlCommand.ExecuteReader();
