@@ -7,6 +7,11 @@ namespace WebApplication
         public static List<Game> Games { get; set; }
         public static List<Game> OwnedGames { get; set; }
 
+        public static Game FindGameByID(int id)
+        {
+            return Games.First(game => game.ID == id);
+        }
+
         public static void GetGames()
         {
             try
@@ -57,6 +62,31 @@ namespace WebApplication
                 OwnedGames = new();
                 OwnedGames.Add(new Game(-1, "Error loading games", "", 0.00m));
             }
+        }
+
+        public static void UpdateGame(Game game)
+        {
+            try
+            {
+                using (MySqlConnection connection = new("Server=studmysql01.fhict.local;Uid=dbi486983;Database=dbi486983;Pwd=21092002"))
+                {
+                    connection.Open();
+                    MySqlCommand command = new(
+                        "UPDATE games SET id=@gameID " +
+                        "name=@gameName," +
+                        "description=@gameDesc " +
+                        "price=@gamePrice " +
+                        "WHERE @gameID=id"
+                        , connection);
+                    command.Parameters.AddWithValue("@gameID", game.ID);
+                    command.Parameters.AddWithValue("@gameName", game.Name);
+                    command.Parameters.AddWithValue("@gameDesc", game.Description);
+                    command.Parameters.AddWithValue("@gamePrice", game.Price);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+            catch { }
         }
     }
 

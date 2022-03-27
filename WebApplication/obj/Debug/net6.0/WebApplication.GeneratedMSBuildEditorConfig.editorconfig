@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Projects\VisualStudio\S2_Project\WebApplication
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Projects/VisualStudio/S2_Project/WebApplication/Pages/EditGame.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEdhbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/VisualStudio/S2_Project/WebApplication/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,20 @@
+﻿@page
+@model WebApplication.Pages.EditGameModel
+@{
+    ViewData["Title"] = "Edit game";
+    <partial name = "_ValidationScriptsPartial" />
+}
+
+<form method="post">
+    <label>Name:</label>
+        <span></span>
+        <input type="text" value=""/>
+
+        <label asp-for="User.Password">Password:</label>
+        <span asp-validation-for="User.Password"></span>
+        <input type="password" asp-for="User.Password" value="" />
+
+        <div>
+            <input id="SubmitBtn" type="submit" value="Login" />
+        </div>
+</form>
