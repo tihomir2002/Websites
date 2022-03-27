@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "o3uEDI0MHTKIi35nUOCQLg8t9GSaXrt01zzVmFPiltG056WzxWmCtULLIvcIYU+Iziv54iUCEYvaCFeQx1Ojpg==",
+  "dgSpecHash": "MfBwnKZ/ohK+vwAoteHVp4U4L9VJXLBwsOODD92cj1G7tmRpo1gMuojtxGH3w9qgbTdGnYqGaaKlp2xkTqItxw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tisho\\Desktop\\s2-individual-project-master\\Individual\\Individual.csproj",
+  "projectFilePath": "D:\\Projects\\VisualStudio\\S2_Project\\Individual\\Individual.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Tisho\\.nuget\\packages\\awssdk.core\\3.7.9.2\\awssdk.core.3.7.9.2.nupkg.sha512",
     "C:\\Users\\Tisho\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Tisho\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",
     "C:\\Users\\Tisho\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",

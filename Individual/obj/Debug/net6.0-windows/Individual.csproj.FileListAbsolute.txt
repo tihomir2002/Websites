@@ -46,7 +46,6 @@ D:\Projects\VisualStudio\S2_Project\Individual\bin\Debug\net6.0-windows\Individu
 D:\Projects\VisualStudio\S2_Project\Individual\bin\Debug\net6.0-windows\Individual.deps.json
 D:\Projects\VisualStudio\S2_Project\Individual\bin\Debug\net6.0-windows\Individual.runtimeconfig.json
 D:\Projects\VisualStudio\S2_Project\Individual\bin\Debug\net6.0-windows\Individual.dll
-D:\Projects\VisualStudio\S2_Project\Individual\bin\Debug\net6.0-windows\ref\Individual.dll
 D:\Projects\VisualStudio\S2_Project\Individual\bin\Debug\net6.0-windows\Individual.pdb
 D:\Projects\VisualStudio\S2_Project\Individual\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
 D:\Projects\VisualStudio\S2_Project\Individual\bin\Debug\net6.0-windows\Google.Protobuf.dll
@@ -88,3 +87,4 @@ C:\Users\Tisho\Desktop\s2-individual-project-master\Individual\obj\Debug\net6.0-
 C:\Users\Tisho\Desktop\s2-individual-project-master\Individual\obj\Debug\net6.0-windows\Individual.pdb
 C:\Users\Tisho\Desktop\s2-individual-project-master\Individual\obj\Debug\net6.0-windows\Individual.genruntimeconfig.cache
 C:\Users\Tisho\Desktop\s2-individual-project-master\Individual\obj\Debug\net6.0-windows\ref\Individual.dll
+D:\Projects\VisualStudio\S2_Project\Individual\obj\Debug\net6.0-windows\refint\Individual.dll

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tisho\\Desktop\\s2-individual-project-master\\Individual\\Individual.csproj": {}
+    "D:\\Projects\\VisualStudio\\S2_Project\\Individual\\Individual.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tisho\\Desktop\\s2-individual-project-master\\Individual\\Individual.csproj": {
+    "D:\\Projects\\VisualStudio\\S2_Project\\Individual\\Individual.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tisho\\Desktop\\s2-individual-project-master\\Individual\\Individual.csproj",
+        "projectUniqueName": "D:\\Projects\\VisualStudio\\S2_Project\\Individual\\Individual.csproj",
         "projectName": "Individual",
-        "projectPath": "C:\\Users\\Tisho\\Desktop\\s2-individual-project-master\\Individual\\Individual.csproj",
+        "projectPath": "D:\\Projects\\VisualStudio\\S2_Project\\Individual\\Individual.csproj",
         "packagesPath": "C:\\Users\\Tisho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tisho\\Desktop\\s2-individual-project-master\\Individual\\obj\\",
+        "outputPath": "D:\\Projects\\VisualStudio\\S2_Project\\Individual\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tisho\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "AWSSDK.Core": {
+              "target": "Package",
+              "version": "[3.7.9.2, )"
+            },
             "MySql.Data": {
               "target": "Package",
               "version": "[8.0.28, )"

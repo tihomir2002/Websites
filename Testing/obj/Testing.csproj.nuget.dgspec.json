@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tisho\\Desktop\\s2-individual-project-master\\Testing\\Testing.csproj": {}
+    "D:\\Projects\\VisualStudio\\S2_Project\\Testing\\Testing.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tisho\\Desktop\\s2-individual-project-master\\Testing\\Testing.csproj": {
+    "D:\\Projects\\VisualStudio\\S2_Project\\Testing\\Testing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tisho\\Desktop\\s2-individual-project-master\\Testing\\Testing.csproj",
+        "projectUniqueName": "D:\\Projects\\VisualStudio\\S2_Project\\Testing\\Testing.csproj",
         "projectName": "Testing",
-        "projectPath": "C:\\Users\\Tisho\\Desktop\\s2-individual-project-master\\Testing\\Testing.csproj",
+        "projectPath": "D:\\Projects\\VisualStudio\\S2_Project\\Testing\\Testing.csproj",
         "packagesPath": "C:\\Users\\Tisho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tisho\\Desktop\\s2-individual-project-master\\Testing\\obj\\",
+        "outputPath": "D:\\Projects\\VisualStudio\\S2_Project\\Testing\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tisho\\AppData\\Roaming\\NuGet\\NuGet.Config",

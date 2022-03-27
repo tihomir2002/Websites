@@ -35,6 +35,8 @@ namespace Individual
                                     MyProfile myProfile = new(dataReader.GetInt32(0), dataReader.GetString(1), dataReader.GetString(2), image);
                                     wrongPassword = false;
                                     new Form1(this,myProfile).Show();
+                                    textBox1.Text = string.Empty;
+                                    textBox2.Text = string.Empty;
                                     Hide();
                                     break;
                                 }
