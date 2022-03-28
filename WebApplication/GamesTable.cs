@@ -1,4 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace WebApplication
 {
@@ -92,10 +94,20 @@ namespace WebApplication
 
     public class Game
     {
-        public int ID { get; set; }
+        [Required(ErrorMessage = "You are missing an id")]
+        public int ID { get; }
+        [Required(ErrorMessage = "You are missing a name")]
+        [MinLength(2, ErrorMessage ="Game name cannot be that short")]
         public string Name { get; set; }
         public string Description { get; set; }
+        [Required(ErrorMessage = "You are missing a price")]
+        [Range(0,999.99,ErrorMessage = "Price must be between 0 and 999.99")]
         public decimal Price { get; set; }
+
+        public Game()
+        {
+
+        }
 
         public Game(int id,string name, string desc, decimal price)
         {

@@ -7,11 +7,11 @@ namespace WebApplication
     {
         public static int ID { get; set; }
         [Required(ErrorMessage = "You need to type an username")]
-        [StringLength(2, ErrorMessage = "Username can't be less than 2 characters")]
+        [MinLength(2, ErrorMessage = "Username can't be less than 2 characters")]
         public string Username { get; set; }
         
         [Required(ErrorMessage = "You need to type a password")]
-        [StringLength(2, ErrorMessage = "Password needs at least 2 characters")]
+        [MinLength(5, ErrorMessage = "Password needs at least 5 characters")]
         public string Password { get; set; }
         public static string Name { get; set; }
         public static string Description { get; set; }

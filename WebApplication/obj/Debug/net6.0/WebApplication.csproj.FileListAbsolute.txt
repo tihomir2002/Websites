@@ -13,7 +13,6 @@ D:\Projects\VisualStudio\S2_Project\WebApplication\bin\Debug\net6.0\WebApplicati
 D:\Projects\VisualStudio\S2_Project\WebApplication\bin\Debug\net6.0\WebApplication.deps.json
 D:\Projects\VisualStudio\S2_Project\WebApplication\bin\Debug\net6.0\WebApplication.runtimeconfig.json
 D:\Projects\VisualStudio\S2_Project\WebApplication\bin\Debug\net6.0\WebApplication.dll
-D:\Projects\VisualStudio\S2_Project\WebApplication\bin\Debug\net6.0\ref\WebApplication.dll
 D:\Projects\VisualStudio\S2_Project\WebApplication\bin\Debug\net6.0\WebApplication.pdb
 D:\Projects\VisualStudio\S2_Project\WebApplication\obj\Debug\net6.0\staticwebassets.build.json
 D:\Projects\VisualStudio\S2_Project\WebApplication\obj\Debug\net6.0\staticwebassets.development.json

@@ -2,19 +2,30 @@
 @model WebApplication.Pages.EditGameModel
 @{
     ViewData["Title"] = "Edit game";
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
     <partial name = "_ValidationScriptsPartial" />
 }
 
-<form method="post">
-    <label>Name:</label>
-        <span></span>
-        <input type="text" value=""/>
+<div id="Form">
+    <form method="post">
+        <label asp-for="Game.ID">ID:</label>
+        <span asp-validation-for="Game.ID"></span>
+        <input type="number" step="1" min="0" asp-for="Game.ID" value=""/>
+    
+        <label asp-for="Game.Name">Name:</label>
+        <span asp-validation-for="Game.Name"></span>
+        <input type="text" asp-for="Game.Name" value=""/>
+        
+        <label asp-for="Game.Description">Description:</label>
+        <textarea name="Desc" asp-for="Game.Description" rows="15" cols="100"></textarea>
 
-        <label asp-for="User.Password">Password:</label>
-        <span asp-validation-for="User.Password"></span>
-        <input type="password" asp-for="User.Password" value="" />
+
+        <label asp-for="Game.Price">Price:</label>
+        <span asp-validation-for="Game.Price"></span>
+        <input type="number" step=".01" min="0" max="999.99" asp-for="Game.Price" value="" />
 
         <div>
-            <input id="SubmitBtn" type="submit" value="Login" />
+            <input id="SubmitBtn" type="submit" value="Confirm" />
         </div>
-</form>
+    </form>
+</div>

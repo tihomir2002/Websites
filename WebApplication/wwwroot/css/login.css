@@ -28,6 +28,10 @@ input{
     border-radius:10%;
 }
 
+textarea{
+    resize:none;
+}
+
 label {
     color: white;
 }

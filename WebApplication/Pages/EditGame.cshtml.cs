@@ -5,8 +5,16 @@ namespace WebApplication.Pages
 {
     public class EditGameModel : PageModel
     {
-        public void OnGet()
+        [BindProperty]
+        public Game Game { get; set; }
+
+        public IActionResult OnPost()
         {
+            if (ModelState.IsValid)
+            {
+                return new RedirectToPageResult("Store");
+            }
+            return Page();
         }
     }
 }
