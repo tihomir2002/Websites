@@ -12,14 +12,18 @@
 
 <div id="Form">
     <form method="post">
-        <label asp-for="User.Username">Name:</label>
-        <span asp-validation-for="User.Username"></span>
-        <input type="text" asp-for="User.Username" value=""/>
+        <label asp-for="user.Username">Name:</label>
+        <span asp-validation-for="user.Username"></span>
+        <input type="text" asp-for="user.Username" value=@PageContext.HttpContext.Session.GetString("username")/>
 
-        <label asp-for="User.Password">Password:</label>
-        <span asp-validation-for="User.Password"></span>
-        <input type="password" asp-for="User.Password" value="" />
-
+        <label asp-for="user.Password">Password:</label>
+        <span asp-validation-for="user.Password"></span>
+        <input type="password" asp-for="user.Password" value=@PageContext.HttpContext.Session.GetString("password")/>
+        
+        <div>
+            <label>Remember Me</label>
+            <input type="checkbox" asp-for="user.RememberMe" checked=@(!string.IsNullOrWhiteSpace(PageContext.HttpContext.Session.GetString("password")))/>
+        </div>
         <div>
             <input id="SubmitBtn" type="submit" value="Login" />
         </div>

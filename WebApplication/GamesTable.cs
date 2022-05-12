@@ -95,7 +95,7 @@ namespace WebApplication
     public class Game
     {
         [Required(ErrorMessage = "You are missing an id")]
-        public int ID { get; }
+        public int ID { get; set; }
         [Required(ErrorMessage = "You are missing a name")]
         [MinLength(2, ErrorMessage ="Game name cannot be that short")]
         public string Name { get; set; }
@@ -106,7 +106,6 @@ namespace WebApplication
 
         public Game()
         {
-
         }
 
         public Game(int id,string name, string desc, decimal price)

@@ -15,17 +15,10 @@ namespace WebApplication
         public string Password { get; set; }
         public static string Name { get; set; }
         public static string Description { get; set; }
+        public static string ImageURL = "";
+        public bool RememberMe { get; set; }
 
-        public User()
-        {
-        }
-
-        public User(string username, string password)
-        {
-            Username = username;
-            Password = password;
-        }
-
+        public User() { }
         public bool TryLogin()
         {
             try

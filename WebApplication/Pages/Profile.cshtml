@@ -4,10 +4,11 @@
     	ViewData["Title"]="My profile";
 }
 
-<div class="jumbotron jumbotron-fluid">
-  <div class="container text-center text-white">
-    <h1 class="display-4">@WebApplication.User.Name</h1>
+  <div>
+    
+    <h1 class="display-4">
+        <img src=~/DefaultImage.png alt="profile pic" />
+         @WebApplication.User.Name</h1>
     <p class="lead">@WebApplication.User.Description</p>
-  </div>
 </div>
 

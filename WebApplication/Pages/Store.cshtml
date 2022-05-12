@@ -33,13 +33,16 @@
         <h2 class="text-center">No games available for buying :(</h2>
     }
 </table>
+<div id="AddGame">
+    <button><a style="color:black" asp-page="/AddGame">Add Game</a></button>
+</div>
 
 @section Scripts
 {
     <script>
         function EditGame(id)
         {	
-            window.location.href = "EditGame";
+            window.location.href = "EditGame?id="+id;
         }
     </script>
 }

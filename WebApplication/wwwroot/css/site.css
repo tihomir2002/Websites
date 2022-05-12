@@ -28,6 +28,7 @@ header {
 
 a {
     visibility: visible;
+    text-decoration:none;
 }
 
 body {
@@ -62,6 +63,7 @@ ul {
 li {
     width: 10%;
     text-align: center;
+    cursor: pointer;
 }
 
 li:hover{
@@ -96,6 +98,13 @@ tr:hover{
 
 #ReadMore:hover{
     color:grey;
+}
+
+#AddGame {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer {

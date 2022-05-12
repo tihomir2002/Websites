@@ -1,14 +1,16 @@
 ﻿@page
-@model WebApplication.Pages.EditGameModel
+@model WebApplication.Pages.AddGameModel
 @{
-    ViewData["Title"] = "Edit game";
-    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
-    <partial name = "_ValidationScriptsPartial" />
+        <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
 }
 
-<div id="Form">
+<div>
     <form method="post">
 
+        <label asp-for="Game.ID">ID:</label>
+        <span asp-validation-for="Game.ID"></span>
+        <input type="number" step="1" min="1" max="999.99" asp-for="Game.ID" value="" />
+        
         <label asp-for="Game.Name">Name:</label>
         <span asp-validation-for="Game.Name"></span>
         <input type="text" asp-for="Game.Name" value=""/>
@@ -25,8 +27,4 @@
             <input id="SubmitBtn" type="submit" value="Confirm" asp-page-handler="Confirm"/>
         </div>
     </form>
-    
-    <form method="post">
-            <input id="SubmitBtn" asp-route-id="@EditGameModel.gameID" type="submit" value="Remove" asp-page-handler="RemoveGame"/>
-    </form>
-</div>
+  </div>
